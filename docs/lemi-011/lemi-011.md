@@ -1,7 +1,7 @@
 # LEMI-011
 This is the site specific info for the LEMI-011 installed here.
-* [[Info]]
-* [[Location]]
+* [Info](#info)
+* [Location](#location)
 
 ## Info
 | Property   | Value      |
