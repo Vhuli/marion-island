@@ -1,5 +1,7 @@
 # LEMI-011
 This is the site specific info for the LEMI-011 installed here.
+* [[Info]]
+* [[Location]]
 
 ## Info
 | Property   | Value      |
@@ -22,11 +24,3 @@ Power is available at the hut, but is not connected to the base UPS.
 
 Network is available at the hut via a NanoStation WiFi point.
 
-```dot
-digraph G {
-    A -> B
-    B -> C
-    B -> D
-}
-
-```
