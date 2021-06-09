@@ -21,3 +21,12 @@ When doing an inspection, it is of utmost importance to first remove power from 
 Power is available at the hut, but is not connected to the base UPS.
 
 Network is available at the hut via a NanoStation WiFi point.
+
+````dot
+digraph G {
+    A -> B
+    B -> C
+    B -> D
+}
+
+```
