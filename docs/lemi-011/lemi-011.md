@@ -1,6 +1,13 @@
 # LEMI-011
 This is the site specific info for the LEMI-011 installed here.
 
+## Info
+| Property   | Value      |
+|------------|------------|
+| IP | 172.18.30.102 |
+| Username | nerd |
+| Password | !nerd001 |
+
 ## Location
 The LEMI-011 is currently located at the DORIS hut. The sensor is in the pillar outside the hut and the digital interface and logger are located inside the hut.
 
