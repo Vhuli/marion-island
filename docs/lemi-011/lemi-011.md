@@ -1,7 +1,8 @@
 # LEMI-011
-This is the site specific info for the LEMI-011 installed here.
 * [Info](#info)
 * [Location](#location)
+- [Sensor](#sensor)
+- [Digital Interface](#digital-interface)
 
 ## Info
 | Property   | Value      |
@@ -19,7 +20,10 @@ The pillar containing the sensor is covered on the sides by two aluminium plates
 When doing an inspection or performing maintenance on the sensor it is of the utmost importance to first switch off the power to the LEMI-011 sensor. To do this, disconnect or unplug the power supply connected to the Digital Interface inside the DORIS Hut.
 
 ### Digital Interface
+The [digital interface]() is located inside the DORIS Hut on the server rack. It gets powered by a power supply and is connected to the logger - a Raspberry Pi - via serial cable.
 
+### Logger
+The logger is a Raspberry Pi located somewhere on the server rack inside the DORIS Hut. 
 
 [Activity Log](activity_log.md)
 
