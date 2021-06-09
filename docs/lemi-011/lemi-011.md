@@ -1,8 +1,9 @@
 # LEMI-011
 * [Info](#info)
 * [Location](#location)
-- [Sensor](#sensor)
-- [Digital Interface](#digital-interface)
+    - [Sensor](#sensor)
+    - [Digital Interface](#digital-interface)
+    - [Logger](#logger)
 
 ## Info
 | Property   | Value      |
