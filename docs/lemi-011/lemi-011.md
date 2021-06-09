@@ -11,11 +11,15 @@ This is the site specific info for the LEMI-011 installed here.
 | Password | !nerd001 |
 
 ## Location
-The LEMI-011 is currently located at the DORIS hut. The sensor is in the pillar outside the hut and the digital interface and logger are located inside the hut.
+The LEMI-011 is currently located at the DORIS hut. The sensor is installed in a pillar next to the hut. The digital interface, power supply and logger are located inside the hut.
 
-The pillar that the sensor is located in is sealed off on the sides with aluminium plates. The magnetometer has been aligned and should not be touched or removed.
+### Sensor
+The pillar containing the sensor is covered on the sides by two aluminium plates. These plates are kept in place by four threaded rods with nuts on both sides. The sensor has been aligned, so it should not be touched or removed.
 
-When doing an inspection, it is of utmost importance to first remove power from the LEMI-011 sensor - do this by unplugging the power supply connected to the Digital Interface inside the hut.
+When doing an inspection or performing maintenance on the sensor it is of the utmost importance to first switch off the power to the LEMI-011 sensor. To do this, disconnect or unplug the power supply connected to the Digital Interface inside the DORIS Hut.
+
+### Digital Interface
+
 
 [Activity Log](activity_log.md)
 
