@@ -64,48 +64,51 @@ Insert the Bootable Flash Drive into the target system on which you want to inst
 
 
 ### Step 4 ) Basic Setup
+Once the system boots up, we will get the following screen.
 
-Once the system boots up, we will get the following screen. 
 1.  Navigate to Install Ubuntu Server using the arrow keys and press enter to select.
 
-![Screenshot of basic setup: Step 1](screenshot_of_basic_setup_step_1.png)\
-**Figure 3.** *Screenshot of basic setup: Step 1.*
+    ![Screenshot of basic setup: Step 1](screenshot_of_basic_setup_step_1.png)\
+    **Figure 3.** *Screenshot of basic setup: Step 1.*
 
 
 2.  Select English as the language and press enter.
  
-![Screenshot of basic setup: Step 2](screenshot_of_basic_setup_step_2.png)\
-**Figure 4.** *Screenshot of basic setup: Step 2.*
+    ![Screenshot of basic setup: Step 2](screenshot_of_basic_setup_step_2.png)\
+    **Figure 4.** *Screenshot of basic setup: Step 2.*
 
 
 3.  Choose keyboard layout and then choose “Done” option and hit enter.
 
-![Screenshot of basic setup: Step 3](screenshot_of_basic_setup_step_3.png)\
-**Figure 5.** *Screenshot of basic setup: Step 3.*
+    ![Screenshot of basic setup: Step 3](screenshot_of_basic_setup_step_3.png)\
+    **Figure 5.** *Screenshot of basic setup: Step 3.*
 
 
 4. Configure network and Ubuntu Archive Mirror.
 
-* If your system is connected to the network, then in the next screen you will see that interface (Ethernet Card) has automatically pick the IP via DHCP. In case you have multiple Ethernet cards then you have option to create a bond interface. Choose “Done” and hit enter.
+    * If your system is connected to the network, then in the next screen you will see that interface (Ethernet Card) has automatically pick the IP via DHCP. In case you have multiple Ethernet cards then you have option to create a bond interface. Choose “Done” and hit enter.
 
-    ![Screenshot of basic setup: Step 4-1](screenshot_of_basic_setup_step_4-1.png)\
-    **Figure 6.** *Screenshot of basic setup: Step 4-1.*
+        ![Screenshot of basic setup: Step 4-1](screenshot_of_basic_setup_step_4-1.png)\
+        **Figure 6.** *Screenshot of basic setup: Step 4-1.*
 
-* If your system is connected to network and running behind the proxy server (i.e., for getting internet), then specify the proxy IP and port else leave as it is and press enter.
+    * If your system is connected to network and running behind the proxy server (i.e., for getting internet), then specify the proxy IP and port else leave as it is and press enter.
 
-    ![Screenshot of basic setup: Step 4-2](screenshot_of_basic_setup_step_4-2.png)\
-    **Figure 7.** *Screenshot of basic setup: Step 4-2.*
+        ![Screenshot of basic setup: Step 4-2](screenshot_of_basic_setup_step_4-2.png)\
+        **Figure 7.** *Screenshot of basic setup: Step 4-2.*
 
-* In the next screen, based on the country location. Installer will automatically configure Ubuntu archive mirror. Choose “Done” and hit Enter to proceed.
+    * In the next screen, based on the country location. Installer will automatically configure Ubuntu archive mirror. Choose “Done” and hit Enter to proceed.
 
-    ![Screenshot of basic setup: Step 4-3](screenshot_of_basic_setup_step_4-3.png)\
-    **Figure 8.** *Screenshot of basic setup: Step 4-3.*
+        ![Screenshot of basic setup: Step 4-3](screenshot_of_basic_setup_step_4-3.png)\
+        **Figure 8.** *Screenshot of basic setup: Step 4-3.*
 
-5.  Configure Storage Layout for Ubuntu 20.04 LTS server.
-In this step, we will be presented a screen where we need to decide how you want to configure storage layout for Ubuntu 20.04 server installation. Here you have two options,
-* Use an entire disk – In case, you want installer to automatically create partitions for you, then choose option.
-* Custom Storage layout – In case, you want to create your own customized partition scheme or table then choose this option.
-In this guide, we will create our own customized partitions scheme by choosing the 2nd option.
+
+5.  Configure Storage Layout for Ubuntu 20.04 LTS server. In this step, we will be presented a screen where we need to decide how you want to configure storage layout for Ubuntu 20.04 server installation. Here you have two options,
+
+    * Use an entire disk – In case, you want installer to automatically create partitions for you, then choose option.
+
+    * Custom Storage layout – In case, you want to create your own customized partition scheme or table then choose this option.
+    In this guide, we will create our own customized partitions scheme by choosing the 2nd option.
+
 
 ### Step 5) Partition the storage space
 1.   Select "Custom storage layout" when you reach the storage configuration step of the installer and choose “Done” and hit Enter to proceed.
