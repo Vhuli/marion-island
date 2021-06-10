@@ -53,8 +53,7 @@ The steps below will take you through the setup step-for-step:
 16. Wait for Rufus to finish creating the Bootable Flash Drive and safely remove the flash drive from your PC.
 
 ![Creating Bootable Flash Drive][]
-
-[creating_bootable_flash_drive]: creating_bootable_flash_drive.png "hello"
+[creating_bootable_flash_drive]: /creating_bootable_flash_drive.png "hello"
 
 *Figure 1: Creating Bootable Flash Drive*
 
