@@ -86,17 +86,20 @@ Once the system boots up, we will get the following screen.
 
 4. Configure network and Ubuntu Archive Mirror.
 
-    * If your system is connected to the network, then in the next screen you will see that interface (Ethernet Card) has automatically pick the IP via DHCP. In case you have multiple Ethernet cards then you have option to create a bond interface. Choose “Done” and hit enter.\
-![Screenshot of basic setup: Step 4-1](screenshot_of_basic_setup_step_4-1.png)\
-**Figure 6.** *Screenshot of basic setup: Step 4-1.*
+    * If your system is connected to the network, then in the next screen you will see that interface (Ethernet Card) has automatically pick the IP via DHCP. In case you have multiple Ethernet cards then you have option to create a bond interface. Choose “Done” and hit enter.
 
-    * If your system is connected to network and running behind the proxy server (i.e., for getting internet), then specify the proxy IP and port else leave as it is and press enter.\
-![Screenshot of basic setup: Step 4-2](screenshot_of_basic_setup_step_4-2.png)\
-**Figure 7.** *Screenshot of basic setup: Step 4-2.*
+    ![Screenshot of basic setup: Step 4-1](screenshot_of_basic_setup_step_4-1.png)\
+        **Figure 6.** *Screenshot of basic setup: Step 4-1.*
 
-    * In the next screen, based on the country location. Installer will automatically configure Ubuntu archive mirror. Choose “Done” and hit Enter to proceed.\
-![Screenshot of basic setup: Step 4-3](screenshot_of_basic_setup_step_4-3.png)\
-**Figure 8.** *Screenshot of basic setup: Step 4-3.*
+    * If your system is connected to network and running behind the proxy server (i.e., for getting internet), then specify the proxy IP and port else leave as it is and press enter.
+
+    ![Screenshot of basic setup: Step 4-2](screenshot_of_basic_setup_step_4-2.png)\
+        **Figure 7.** *Screenshot of basic setup: Step 4-2.*
+
+    * In the next screen, based on the country location. Installer will automatically configure Ubuntu archive mirror. Choose “Done” and hit Enter to proceed.
+
+    ![Screenshot of basic setup: Step 4-3](screenshot_of_basic_setup_step_4-3.png)\
+        **Figure 8.** *Screenshot of basic setup: Step 4-3.*
 
 5.  Configure Storage Layout for Ubuntu 20.04 LTS server.
 In this step, we will be presented a screen where we need to decide how you want to configure storage layout for Ubuntu 20.04 server installation. Here you have two options,
