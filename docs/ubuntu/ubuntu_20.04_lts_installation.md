@@ -267,14 +267,14 @@ You should now be able to remove any of the two drives and still boot the system
 ### Step 7) Adding a fresh drive after a failure.
 So, a drive has failed, and you have replaced it with a new one. How do you set it up?
 First, find the new drive:
-''' bash
+``` bash
 $ sudo fdisk -l
-'''
+```
 It is probably one without any partitions. Make sure you are using the right drive. In my case, it’s /dev/sdb, so I will want to back up the partition table from /dev/sda and write it to /dev/sdb. Change the source to the existing drive and does not to the new one:
-''' bash
+``` bash
 $ source=/dev/sda
 $ dest=/dev/sdb
-'''
+```
 Create a backup in case you mix it up:
 $ sudo sgdisk --backup=backup-$(basename $source).sgdisk $source
 $ sudo sgdisk --backup=backup-$(basename $dest).sgdisk $dest
