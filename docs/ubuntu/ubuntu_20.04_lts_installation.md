@@ -405,7 +405,9 @@ All good? Great! You now have a working RAID again.
 
 ---
 
-Reference: 
+Reference:
+
 [Ubuntu 20.04 LTS Server Installation Guide](https://www.linuxtechi.com/ubuntu-20-04-lts-server-installation-guide/)
+
 [Ubuntu 20.04 with software RAID1 and UEFI](https://alexskra.com/blog/ubuntu-20-04-with-software-raid1-and-uefi/)
 
