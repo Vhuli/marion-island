@@ -86,11 +86,12 @@ Once the system boots up, we will get the following screen.
 
 4. Configure network and Ubuntu Archive Mirror.
 
-    * If your system is connected to the network, then in the next screen you will see that interface (Ethernet Card) has automatically pick the IP via DHCP. In case you have multiple Ethernet cards then you have option to create a bond interface. Choose “Done” and hit enter.
-        ![Screenshot of basic setup: Step 4-1](screenshot_of_basic_setup_step_4-1.png)\
-        **Figure 6.** *Screenshot of basic setup: Step 4-1.*
+    * If your system is connected to the network, then in the next screen you will see that interface (Ethernet Card) has automatically pick the IP via DHCP. In case you have multiple Ethernet cards then you have option to create a bond interface. Choose “Done” and hit enter.\
+    ![Screenshot of basic setup: Step 4-1](screenshot_of_basic_setup_step_4-1.png)\
+    **Figure 6.** *Screenshot of basic setup: Step 4-1.*
 
-    * If your system is connected to network and running behind the proxy server (i.e., for getting internet), then specify the proxy IP and port else leave as it is and press enter.\
+    * If your system is connected to network and running behind the proxy server (i.e., for getting internet), then specify the proxy IP and port else leave as it is and press enter.
+
         ![Screenshot of basic setup: Step 4-2](screenshot_of_basic_setup_step_4-2.png)\
         **Figure 7.** *Screenshot of basic setup: Step 4-2.*
 
