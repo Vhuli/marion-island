@@ -1,38 +1,35 @@
-
-Prepared by : Vhuli Manukha
+# Installing Ubuntu 20.04 LTS (Focal Fossa) with 2 disks in a RAID 1 configuration
+Author : Vhuli Manukha
 Date : 24/05/2021
 
-Creating a Software RAID 1 setup for 2-disks server on Ubuntu Server 20.04 LTS (Focal Fossa).
-A.  Introduction
-
+## Introduction
 In this article we will demonstrate Ubuntu 20.04 LTS server installation steps (for raid 1 setup) with screenshots. Before initiating the Installation process, let us see what minimum system requirements for Ubuntu 20.04 LTS Server installation are.
 1.  4 GB Memory (RAM)
 2.  Dual Core Processor
 3.  25 GB Hard Disk Space
 4.  Bootable Media (USB / DVD)
 5.  Stable Internet Connection
-B.  Ubuntu Server  20.04 LTS (Focal Fossa) installation.
 
+## Instructions
 Let us assume I have a server which has two hard disks ( I TB each ) on which we will be installing Ubuntu 20.04 LTS server and create software RAID 1.
-Step 1) Download Ubuntu 20.04 LTS Server ISO file
 
-1.  Download ISO file of Ubuntu 20.04 LTS server using following URL: https://ubuntu.com/server 
-2.  Save the ISO file somewhere you can easily find it again, like your Downloads, Documents or Desktop folder.
-3.  Once ISO file is downloaded on your system then make a bootable USB drive or DVD.
+### Step 1) Download Ubuntu 20.04 LTS Server ISO file
+1. Download ISO file of Ubuntu 20.04 LTS server using following URL: https://ubuntu.com/server 
+2. Save the ISO file somewhere you can easily find it again, like your Downloads, Documents or Desktop folder.
+3. Once ISO file is downloaded on your system then make a bootable USB drive or DVD.
 
-Step 2) Creating Bootable Drive
-
+### Step 2) Creating Bootable Drive
 To create the installation medium, we will use a Flash Drive for this since none of the servers we are using currently have a DVD drive. There are several ways of doing this, but for our convenience we will just download and use the Rufus (windows) media creation tool. It is easy to use and less prone to errors than manually configuring the bootable drive.
 The steps below will take you through the setup step-for-step:
-1.  Follow this link on your Windows PC:  https://rufus.ie/en_US/. Download the latest version of the Rufus tool (this manual uses rufus-3.14)
-2.  Insert the flash drive into your PC.
-3.  Run the rufus-3.14 executable file.
-4.  Select the device you want to create the bootable media on (the flash drive is selected automatically if it is the only one attached). 
-5.  Under Boot selection, select ISO image. Click on the SELECT button, browse to where you saved the ubuntu server ISO file, select it, and click the Open button.
-6.  Under Partition scheme, select MBR.
-7.  Under Target system, select BIOS or UEFI.
-8.  Do not change anything under the advanced drive properties.
-9.  Leave the volume label as is.
+1. Follow this link on your Windows PC:  https://rufus.ie/en_US/. Download the latest version of the Rufus tool (this manual uses rufus-3.14)
+2. Insert the flash drive into your PC.
+3. Run the rufus-3.14 executable file.
+4. Select the device you want to create the bootable media on (the flash drive is selected automatically if it is the only one attached). 
+5. Under Boot selection, select ISO image. Click on the SELECT button, browse to where you saved the ubuntu server ISO file, select it, and click the Open button.
+6. Under Partition scheme, select MBR.
+7. Under Target system, select BIOS or UEFI.
+8. Do not change anything under the advanced drive properties.
+9. Leave the volume label as is.
 10. The File system should be specified as Large FAT32.
 11. Do not change anything under the advanced format options.
 12. Click on the START button.
@@ -44,12 +41,12 @@ The steps below will take you through the setup step-for-step:
 Figure 1: Creating Bootable Flash Drive
 
 
-Step 3) Boot target system using bootable media (USB)
-
+### Step 3) Boot target system using bootable media (USB)
 Insert the Bootable Flash Drive into the target system on which you want to install Ubuntu 20.04 LTS server and reboot the target system (we are using supermicro). On reboot go to its bios settings (by pressing F11 for Supermicro PC) and change boot medium from disk to bootable media (Flash drive). UEFI: Generic Flash Disk 8.07. partition 1 in our case
  
 Figure 2: Booting from Flash Drive
-Step 4 ) Basic Setup.
+
+### Step 4 ) Basic Setup
 
 Once the system boots up, we will get the following screen. 
 1.  Navigate to Install Ubuntu Server using the arrow keys and press enter to select.
