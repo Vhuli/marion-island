@@ -3,11 +3,11 @@ Author : Vhuli Manukha
 
 Date : 24/05/2021
 
-<table>
+<!-- <table>
     <tr>
         <td>Foo</td>
     </tr>
-</table>
+</table> -->
 
 ## Introduction
 In this article we will demonstrate Ubuntu 20.04 LTS server installation steps (for raid 1 setup) with screenshots. Before initiating the Installation process, let us see what minimum system requirements for Ubuntu 20.04 LTS Server installation are.
@@ -21,11 +21,11 @@ In this article we will demonstrate Ubuntu 20.04 LTS server installation steps (
 Let us assume I have a server which has two hard disks ( I TB each ) on which we will be installing Ubuntu 20.04 LTS server and create software RAID 1.
 
 Steps:
-1. [Download the ISO](step-1-download-the-iso-file)
-2. [Create a bootable drive](step-2-create-a-bootable-drive)
-3. [Boot into the target system](step-3-boot-into-the-target-system)
-4. [Basic setup](step-4-basic-setup)
-5. [Partition the storage space](step-5-partition-the-storage-space)
+1. [Download the ISO](#step-1-download-the-iso-file)
+2. [Create a bootable drive](#step-2-create-a-bootable-drive)
+3. [Boot into the target system](#step-3-boot-into-the-target-system)
+4. [Basic setup](#step-4-basic-setup)
+5. [Partition the storage space](#step-5-partition-the-storage-space)
 
 ### Step 1) Download the ISO file
 1. Download ISO file of Ubuntu 20.04 LTS server using following URL: https://ubuntu.com/server 
@@ -51,8 +51,9 @@ The steps below will take you through the setup step-for-step:
 14. After the missing libraries have been downloaded, you will see an ISO Hybrid image detected window appear, select the Write in ISO Image mode (Recommended) option, and click OK.
 15. A window will now appear warning you that everything that is currently on that disk will be erased. After making sure there is nothing valuable on the flash drive, you can click OK.
 16. Wait for Rufus to finish creating the Bootable Flash Drive and safely remove the flash drive from your PC.
- 
-Figure 1: Creating Bootable Flash Drive
+
+![Figure 1: Creating Bootable Flash Drive](creating_bootable_flash_drive.png)
+<!-- Figure 1: Creating Bootable Flash Drive -->
 
 
 ### Step 3) Boot into the target system
