@@ -28,7 +28,7 @@ Steps:
 5. [Partition the storage space](#step-5-partition-the-storage-space)
 
 ### Step 1) Download the ISO file
-1. Download ISO file of Ubuntu 20.04 LTS server using following URL: https://ubuntu.com/server 
+1. Download ISO file of Ubuntu 20.04 LTS server using following URL: https://ubuntu.com/server
 2. Save the ISO file somewhere you can easily find it again, like your Downloads, Documents or Desktop folder.
 3. Once ISO file is downloaded on your system then make a bootable USB drive or DVD.
 
@@ -38,7 +38,7 @@ The steps below will take you through the setup step-for-step:
 1. Download the latest version of the [Rufus](https://rufus.ie/en_US/) tool (this manual uses rufus-3.14)
 2. Insert the flash drive into your PC.
 3. Run the rufus-3.14 executable file.
-4. Select the device you want to create the bootable media on (the flash drive is selected automatically if it is the only one attached). 
+4. Select the device you want to create the bootable media on (the flash drive is selected automatically if it is the only one attached).
 5. Under Boot selection, select ISO image. Click on the SELECT button, browse to where you saved the ubuntu server ISO file, select it, and click the Open button.
 6. Under Partition scheme, select MBR.
 7. Under Target system, select BIOS or UEFI.
@@ -73,7 +73,7 @@ Once the system boots up, we will get the following screen.
 
 
 2.  Select English as the language and press enter.
- 
+
     ![Screenshot of basic setup: Step 2](screenshot_of_basic_setup_step_2.png)\
     **Figure 4.** *Screenshot of basic setup: Step 2.*
 
@@ -112,7 +112,7 @@ Once the system boots up, we will get the following screen.
 
 ### Step 5) Partition the storage space
 1. Select "Custom storage layout" when you reach the storage configuration step of the installer and choose “Done” and hit Enter to proceed.
- 
+
     ![Screenshot of drive partition setup: Step 1](screenshot_of_drive_partition_setup_step_1.png)\
     **Figure 9.** *Screenshot of drive partition setup: Step 1.*
 
@@ -124,29 +124,29 @@ Once the system boots up, we will get the following screen.
 
         ![Screenshot of drive partition setup: Step 3-1](screenshot_of_drive_partition_setup_step_3-1.png)\
         **Figure 10.** *Screenshot of drive partition setup: Step 3-1.*
- 
+
     * Note the EFI system partition created on first Disk. The Disk space should also change from unused to free space.
 
         ![Screenshot of drive partition setup: Step 3-2](screenshot_of_drive_partition_setup_step_3-2.png)\
         **Figure 11.** *Screenshot of drive partition setup: Step 3-2.*
- 
+
     * Select second Disk and repeat the same setup on the second disk and when setup done pay attention to the pointers.
 
         ![Screenshot of drive partition setup: Step 3-3](screenshot_of_drive_partition_setup_step_3-3.png)\
         **Figure 12.** *Screenshot of drive partition setup: Step 3-3.*
- 
+
 4. Add an unformatted GPT partition to both drives. They need to have the same size. We are going to use those partitions for the RAID that contains the OS.
 
     * Select the first Disk to add as "leave unformatted" Disk (same menu that had REFORMAT : Add GPT Partition=>Size: do not allocate space => format : leave unformatted=>Mount : / => choose to “Create” and hit enter).
 
         ![Screenshot of drive partition setup: Step 4-1](screenshot_of_drive_partition_setup_step_4-1.png)\
         **Figure 13.** *Screenshot of drive partition setup: Step 4-1.*
- 
-    * Note that partition 2 created with unformatted (unused) space on first  Disk. 
+
+    * Note that partition 2 created with unformatted (unused) space on first  Disk.
 
         ![Screenshot of drive partition setup: Step 4-2](screenshot_of_drive_partition_setup_step_4-2.png)\
         **Figure 14.** *Screenshot of drive partition setup: Step 4-2.*
- 
+
     * Select the 2nd  Disk to add as "leave unformatted" disk (same as above). And when done you will notice that both drives have partition 2 added.
 
         ![Screenshot of drive partition setup: Step 4-3](screenshot_of_drive_partition_setup_step_4-3.png)\
@@ -154,7 +154,7 @@ Once the system boots up, we will get the following screen.
 
 
 ### Step 6) Creating Software RAID 1 system
-1. Navigate to “Create software RAID (md)” and hit enter. 
+1. Navigate to “Create software RAID (md)” and hit enter.
 
     ![Screenshot of raid setup: Step 1](screenshot_of_raid_setup_step_1.png)\
     **Figure 16.** *Screenshot of raid setup: Step 1.*
@@ -169,16 +169,16 @@ Once the system boots up, we will get the following screen.
     ![Screenshot of raid setup: Step 3](screenshot_of_raid_setup_step_3.png)\
     **Figure 18.** *Screenshot of raid setup: Step 3.*
 
-4. Let us add at least one GPT partition to it. 
+4. Let us add at least one GPT partition to it.
 
         ![Screenshot of raid setup: Step 4-1](screenshot_of_raid_setup_step_4-1.png)\
         **Figure 19.** *Screenshot of raid setup: Step 4-1.*
- 
+
     * Optional: If you want the ability to swap, create a swap partition on the RAID device. Set the size to the same as your RAM, or half if you have 64 GB or more RAM.
 
         ![Screenshot of raid setup: Step 4-2](screenshot_of_raid_setup_step_4-2.png)\
         **Figure 20.** *Screenshot of raid setup: Step 4-2.*
- 
+
     * Note new swap partition created on RAID1.
 
         ![Screenshot of raid setup: Step 4-3](screenshot_of_raid_setup_step_4-3.png)\
@@ -205,7 +205,7 @@ Once the system boots up, we will get the following screen.
 
     ![Screenshot of final setup: Step 1](screenshot_of_final_setup_step_1.png)\
     **Figure 25.** *Screenshot of final setup: Step 1.*
- 
+
 2. Specify hostname and local user details.
 
     * In this step, you need to specify the local user details and Host name that you want to set for your server. So, enter the details that suits to your installation. Choose “Done” and hit enter.
@@ -236,14 +236,14 @@ Once the system boots up, we will get the following screen.
 
         ![Screenshot of final setup: Step 4-2](screenshot_of_final_setup_step_4-2.png)\
         **Figure 30.** *Screenshot of final setup: Step 4-2.*
- 
+
 > Note: Do not forget to change boot medium from bootable media to disk so that system boots up with the disk on which we have just installed Ubuntu 20.04 LTS Severs.
 
 5.   Login after successful installation and verify OS version. Once the system is available after reboot, use the local user credentials that we have created during the installation for login.
 
     ![Screenshot of final setup: Step 5](screenshot_of_final_setup_step_5.png)\
     **Figure 31.** *Screenshot of final setup: Step 5.*
- 
+
 Perfect, this confirms that Ubuntu 20.04 LTS server is installed successfully on our system.
 
 
@@ -257,6 +257,9 @@ $ sudo apt install gnome-shell ubuntu-gnome-desktop -y
 ```
 
 ### Step 2) Once Gnome desktop packages are installed successfully then reboot your server and you will get following login screen.
+
+
+> I am a test change
 
 ```bash
 $ sudo apt update && sudo apt upgrade -y
@@ -410,4 +413,3 @@ Reference:
 [Ubuntu 20.04 LTS Server Installation Guide](https://www.linuxtechi.com/ubuntu-20-04-lts-server-installation-guide/)
 
 [Ubuntu 20.04 with software RAID1 and UEFI](https://alexskra.com/blog/ubuntu-20-04-with-software-raid1-and-uefi/)
-
