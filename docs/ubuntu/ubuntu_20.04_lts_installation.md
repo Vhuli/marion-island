@@ -66,7 +66,7 @@ Insert the Bootable Flash Drive into the target system on which you want to inst
 <figure>
     <figcaption>Figure 2: Booting from Flash Drive.</figcaption>
     
-    ![Booting from Flash Drive](booting_from_flash_drive.png "Booting from flash drive")
+![Booting from Flash Drive](booting_from_flash_drive.png "Booting from flash drive")
 
 </figure>
 
