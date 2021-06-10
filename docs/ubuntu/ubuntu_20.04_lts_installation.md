@@ -1,5 +1,6 @@
 # Installing Ubuntu 20.04 LTS (Focal Fossa) with 2 disks in a RAID 1 configuration
 Author : Vhuli Manukha
+
 Date : 24/05/2021
 
 ## Introduction
@@ -13,12 +14,16 @@ In this article we will demonstrate Ubuntu 20.04 LTS server installation steps (
 ## Instructions
 Let us assume I have a server which has two hard disks ( I TB each ) on which we will be installing Ubuntu 20.04 LTS server and create software RAID 1.
 
-### Step 1) Download Ubuntu 20.04 LTS Server ISO file
+Steps:
+[Download the ISO](step-1-download-the-iso-file)
+[Create a bootable drive](step-2-create-a-bootable-drive)
+
+### Step 1) Download the ISO file
 1. Download ISO file of Ubuntu 20.04 LTS server using following URL: https://ubuntu.com/server 
 2. Save the ISO file somewhere you can easily find it again, like your Downloads, Documents or Desktop folder.
 3. Once ISO file is downloaded on your system then make a bootable USB drive or DVD.
 
-### Step 2) Creating Bootable Drive
+### Step 2) Create a bootable drive
 To create the installation medium, we will use a Flash Drive for this since none of the servers we are using currently have a DVD drive. There are several ways of doing this, but for our convenience we will just download and use the Rufus (windows) media creation tool. It is easy to use and less prone to errors than manually configuring the bootable drive.
 The steps below will take you through the setup step-for-step:
 1. Follow this link on your Windows PC:  https://rufus.ie/en_US/. Download the latest version of the Rufus tool (this manual uses rufus-3.14)
