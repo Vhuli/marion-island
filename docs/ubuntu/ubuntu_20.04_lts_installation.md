@@ -111,58 +111,83 @@ Once the system boots up, we will get the following screen.
 
 
 ### Step 5) Partition the storage space
-1.   Select "Custom storage layout" when you reach the storage configuration step of the installer and choose “Done” and hit Enter to proceed.
+1. Select "Custom storage layout" when you reach the storage configuration step of the installer and choose “Done” and hit Enter to proceed.
  
-Figure 9: Screenshot of advanced setup: step 1
-2.  If the disks have existing partitions, click on each disk under AVAILABLE DEVICES and then select REFORMAT. This will (temporarily) wipe out the partitions.
-3.  Mark both drives as a boot device. Doing so will create an ESP (EFI system partition) on both drives.
-•   Select the 1st Disk to add as "boot" disk (same menu that had REFORMAT in).  Navigate to “Use as Boot Device” and press enter.
- 
-Figure 10: Screenshot of drive partition setup: step 2(a)
-•   Note the EFI system partition created on 1st Disk. The Disk space should also change from unused to free space.
+    ![Screenshot of drive partition setup: Step 1](screenshot_of_drive_partition_setup_step_1.png)\
+    **Figure 9.** *Screenshot of drive partition setup: Step 1.*
 
+2. If the disks have existing partitions, click on each disk under AVAILABLE DEVICES and then select REFORMAT. This will (temporarily) wipe out the partitions.
+
+3. Mark both drives as a boot device. Doing so will create an ESP (EFI system partition) on both drives.
+
+    * Select the first disk to add as "boot" disk (same menu that had REFORMAT in).  Navigate to “Use as Boot Device” and press enter.
+
+        ![Screenshot of drive partition setup: Step 3-1](screenshot_of_drive_partition_setup_step_3-1.png)\
+        **Figure 10.** *Screenshot of drive partition setup: Step 3-1.*
  
-Figure 11: Screenshot of drive partition setup: step 2(b)
-•   Select 2nd Disk and repeat the same setup on the 2nd Disk and when setup done pay attention to the pointers.
+    * Note the EFI system partition created on first Disk. The Disk space should also change from unused to free space.
+
+        ![Screenshot of drive partition setup: Step 3-2](screenshot_of_drive_partition_setup_step_3-2.png)\
+        **Figure 11.** *Screenshot of drive partition setup: Step 3-2.*
  
-Figure 12: Screenshot of drive partition setup: step 2(c)
-4.  Add an unformatted GPT partition to both drives. They need to have the same size. We are going to use those partitions for the RAID that contains the OS.
-•   Select the 1st Disk to add as "leave unformatted" Disk (same menu that had REFORMAT : Add GPT Partition=>Size: do not allocate space => format : leave unformatted=>Mount : / => choose to “Create” and hit enter). 
+    * Select second Disk and repeat the same setup on the second disk and when setup done pay attention to the pointers.
+
+        ![Screenshot of drive partition setup: Step 3-3](screenshot_of_drive_partition_setup_step_3-3.png)\
+        **Figure 12.** *Screenshot of drive partition setup: Step 3-3.*
  
-Figure 13: Screenshot of drive partition setup: step 3(a)
-•   Note that partition 2 created with unformatted (unused) space on 1st  Disk. 
+4. Add an unformatted GPT partition to both drives. They need to have the same size. We are going to use those partitions for the RAID that contains the OS.
+
+    * Select the first Disk to add as "leave unformatted" Disk (same menu that had REFORMAT : Add GPT Partition=>Size: do not allocate space => format : leave unformatted=>Mount : / => choose to “Create” and hit enter).
+
+        ![Screenshot of drive partition setup: Step 4-1](screenshot_of_drive_partition_setup_step_4-1.png)\
+        **Figure 13.** *Screenshot of drive partition setup: Step 4-1.*
  
-Figure 14: Screenshot of drive partition d setup : step 3(b)
-•   Select the 2nd  Disk to add as "leave unformatted" disk (same as above). And when done you will notice that both drives have partition 2 added.
+    * Note that partition 2 created with unformatted (unused) space on first  Disk. 
+
+        ![Screenshot of drive partition setup: Step 4-2](screenshot_of_drive_partition_setup_step_4-2.png)\
+        **Figure 14.** *Screenshot of drive partition setup: Step 4-2.*
  
-Figure 15: Screenshot of drive partition setup: step 3(c)
+    * Select the 2nd  Disk to add as "leave unformatted" disk (same as above). And when done you will notice that both drives have partition 2 added.
+
+        ![Screenshot of drive partition setup: Step 4-3](screenshot_of_drive_partition_setup_step_4-3.png)\
+        **Figure 15.** *Screenshot of drive partition setup: Step 4-3.*
+
 
 ### Step 6) Creating Software RAID 1 system
-1.  Navigate to “Create software RAID (md)” and hit enter. 
+1. Navigate to “Create software RAID (md)” and hit enter. 
 
- 
-Figure 16: Screenshot of raid setup : step 1 
+    ![Screenshot of raid setup: Step 1](screenshot_of_raid_setup_step_1.png)\
+    **Figure 16.** *Screenshot of raid setup: Step 1.*
 
-2.  Then navigate and  select both partitions created  for the OS by pressing space bar (it will be marked with x) and then choose “Create” and hit enter.
- 
-Figure 17: Screenshot of raid setup: step 2 
-3.  Congratulations, you now have a new RAID device.
- 
-Figure 18: Screenshot of raid setup: step 3
+2. Then navigate and  select both partitions created  for the OS by pressing space bar (it will be marked with x) and then choose “Create” and hit enter.
 
+    ![Screenshot of raid setup: Step 2](screenshot_of_raid_setup_step_2.png)\
+    **Figure 17.** *Screenshot of raid setup: Step 2.*
 
+3. Congratulations, you now have a new RAID device.
 
+    ![Screenshot of raid setup: Step 3](screenshot_of_raid_setup_step_3.png)\
+    **Figure 18.** *Screenshot of raid setup: Step 3.*
 
-4.   Let us add at least one GPT partition to it. 
+4. Let us add at least one GPT partition to it. 
+
+        ![Screenshot of raid setup: Step 4-1](screenshot_of_raid_setup_step_4-1.png)\
+        **Figure 19.** *Screenshot of raid setup: Step 4-1.*
  
-Figure 19: Screenshot of raid setup: step 4(a)
-•   Optional: If you want the ability to swap, create a swap partition on the RAID device. Set the size to the same as your RAM, or half if you have 64 GB or more RAM.
+    * Optional: If you want the ability to swap, create a swap partition on the RAID device. Set the size to the same as your RAM, or half if you have 64 GB or more RAM.
+
+        ![Screenshot of raid setup: Step 4-2](screenshot_of_raid_setup_step_4-2.png)\
+        **Figure 20.** *Screenshot of raid setup: Step 4-2.*
  
-Figure 20: Screenshot of raid setup: step 4(b)
-•   Note new swap partition  created on RAID1.
- 
-Figure 21: Screenshot of raid setup : step 4(c)
-5.  Create a partition for Ubuntu on the RAID device. You can use the remaining space if you want to. Format it as ext4 and mount it at /.
+    * Note new swap partition created on RAID1.
+
+        ![Screenshot of raid setup: Step 4-3](screenshot_of_raid_setup_step_4-3.png)\
+        **Figure 21.** *Screenshot of raid setup: Step 4-3.*
+
+5. Create a partition for Ubuntu on the RAID device. You can use the remaining space if you want to. Format it as ext4 and mount it at /.
+
+    ![Screenshot of raid setup: Step 2](screenshot_of_raid_setup_step_2.png)\
+    **Figure 17.** *Screenshot of raid setup: Step 2.*
  
 Figure 22:Screenshot of raid setup: step 5(a)
  
