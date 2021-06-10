@@ -64,10 +64,14 @@ The steps below will take you through the setup step-for-step:
 Insert the Bootable Flash Drive into the target system on which you want to install Ubuntu 20.04 LTS server and reboot the target system (we are using supermicro). On reboot go to its bios settings (by pressing F11 for Supermicro PC) and change boot medium from disk to bootable media (Flash drive). UEFI: Generic Flash Disk 8.07. partition 1 in our case
 
 <figure>
-    <figcaption>Figure 2: Booting from Flash Drive.</figcaption>
     
 ![Booting from Flash Drive](booting_from_flash_drive.png "Booting from flash drive")
 
+<figcaption>
+
+*Figure 2: Booting from Flash Drive.*
+
+</figcaption>
 </figure>
 
 
