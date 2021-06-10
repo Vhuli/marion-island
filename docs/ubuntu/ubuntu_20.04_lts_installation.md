@@ -15,8 +15,8 @@ In this article we will demonstrate Ubuntu 20.04 LTS server installation steps (
 Let us assume I have a server which has two hard disks ( I TB each ) on which we will be installing Ubuntu 20.04 LTS server and create software RAID 1.
 
 Steps:
-[Download the ISO](step-1-download-the-iso-file)
-[Create a bootable drive](step-2-create-a-bootable-drive)
+1. [Download the ISO](step-1-download-the-iso-file)
+2. [Create a bootable drive](step-2-create-a-bootable-drive)
 
 ### Step 1) Download the ISO file
 1. Download ISO file of Ubuntu 20.04 LTS server using following URL: https://ubuntu.com/server 
