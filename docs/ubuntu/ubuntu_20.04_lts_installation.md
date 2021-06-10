@@ -52,9 +52,9 @@ The steps below will take you through the setup step-for-step:
 15. A window will now appear warning you that everything that is currently on that disk will be erased. After making sure there is nothing valuable on the flash drive, you can click OK.
 16. Wait for Rufus to finish creating the Bootable Flash Drive and safely remove the flash drive from your PC.
 
-![Creating Bootable Flash Drive](creating_bootable_flash_drive.png "hello!" "figure 1")
+![Creating Bootable Flash Drive](creating_bootable_flash_drive.png "hello!")
 
-*Figure 1: Creating Bootable Flash Drive*
+<figcatpion>Figure 1: Creating Bootable Flash Drive.</figcatpion>
 
 
 ### Step 3) Boot into the target system
