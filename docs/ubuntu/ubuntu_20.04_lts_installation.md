@@ -35,7 +35,7 @@ Steps:
 ### Step 2) Create a bootable drive
 To create the installation medium, we will use a Flash Drive for this since none of the servers we are using currently have a DVD drive. There are several ways of doing this, but for our convenience we will just download and use the Rufus (windows) media creation tool. It is easy to use and less prone to errors than manually configuring the bootable drive.
 The steps below will take you through the setup step-for-step:
-1. Follow this link on your Windows PC:  https://rufus.ie/en_US/. Download the latest version of the Rufus tool (this manual uses rufus-3.14)
+1. Download the latest version of the [Rufus](https://rufus.ie/en_US/) tool (this manual uses rufus-3.14)
 2. Insert the flash drive into your PC.
 3. Run the rufus-3.14 executable file.
 4. Select the device you want to create the bootable media on (the flash drive is selected automatically if it is the only one attached). 
