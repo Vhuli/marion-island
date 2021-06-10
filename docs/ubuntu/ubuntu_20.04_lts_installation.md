@@ -17,6 +17,9 @@ Let us assume I have a server which has two hard disks ( I TB each ) on which we
 Steps:
 1. [Download the ISO](step-1-download-the-iso-file)
 2. [Create a bootable drive](step-2-create-a-bootable-drive)
+3. [Boot into the target system](step-3-boot-into-the-target-system)
+4. [Basic setup](step-4-basic-setup)
+5. [Partition the storage space](step-5-partition-the-storage-space)
 
 ### Step 1) Download the ISO file
 1. Download ISO file of Ubuntu 20.04 LTS server using following URL: https://ubuntu.com/server 
@@ -46,7 +49,7 @@ The steps below will take you through the setup step-for-step:
 Figure 1: Creating Bootable Flash Drive
 
 
-### Step 3) Boot target system using bootable media (USB)
+### Step 3) Boot into the target system
 Insert the Bootable Flash Drive into the target system on which you want to install Ubuntu 20.04 LTS server and reboot the target system (we are using supermicro). On reboot go to its bios settings (by pressing F11 for Supermicro PC) and change boot medium from disk to bootable media (Flash drive). UEFI: Generic Flash Disk 8.07. partition 1 in our case
  
 Figure 2: Booting from Flash Drive
@@ -83,7 +86,8 @@ In this step, we will be presented a screen where we need to decide how you want
    Use an entire disk – In case, you want installer to automatically create partitions for you, then choose option.
    Custom Storage layout – In case, you want to create your own customized partition scheme or table then choose this option.
 In this guide, we will create our own customized partitions scheme by choosing the 2nd option.
-Step 5) Drive Partitioning (custom storage layout).
+
+### Step 5) Partition the storage space
 1.   Select "Custom storage layout" when you reach the storage configuration step of the installer and choose “Done” and hit Enter to proceed.
  
 Figure 9: Screenshot of advanced setup: step 1
@@ -110,7 +114,7 @@ Figure 14: Screenshot of drive partition d setup : step 3(b)
  
 Figure 15: Screenshot of drive partition setup: step 3(c)
 
-Step 6) Creating Software RAID 1 system.
+### Step 6) Creating Software RAID 1 system
 1.  Navigate to “Create software RAID (md)” and hit enter. 
 
  
@@ -154,7 +158,7 @@ Figure 24: Screenshot of raid setup : step 6
 
 
 
-Step 7) Finalising the setup
+### Step 7) Finalising the setup
 1.  Choose to continue to write changes into the disk and to proceed with installation,
  
 Figure 25: Screenshot of final setup: step 1
@@ -192,7 +196,7 @@ Once the system is available after reboot, use the local user credentials that w
 Figure 31: Screenshot of final setup: step 5
 Perfect, this confirms that Ubuntu 20.04 LTS server is installed successfully on our system.
 
-C.  GUI/Desktop  Installation.
+## GUI/Desktop  Installation
 
 Step 1) Run the following command.
 
@@ -209,21 +213,22 @@ Step 2) Once Gnome desktop packages are installed successfully then reboot your 
 Figure 32: Screenshot of GUI setup : step 1
 
 
-D.  Handling the raided booting.
+## Handling the raided booting
 Software RAID has been relatively simple to use for a long time as it mostly just works. Things are less straightforward when using UEFI as you need an EFI partition that cannot be on a software RAID.
 Well, you could put the EFI partition in a software RAID if you put the metadata at the end of the partition. That way the beginning of the partition would be the same as without RAID. The issue with this is if something external writes to the partition as you cannot be sure which drive has the correct state. That is why we are going to use another approach.
 Instead of putting it on a RAID, we will install Ubuntu as usual, and then copy the EFI partition over to the second drive. Then we will make sure that either of the two hard drives can go away without affecting the ability to run or boot. We are going to use the efibootmgr tool to make sure both drives are in the boot-list. We will also add some info on how to handle drive replacements and updates affecting EFI.  So, let us get on with it. run the following command:
-Step 1) Avoid slow boot.
+
+### Step 1) Avoid slow boot.
 Remove btrfs-progs to speed up the boot process in case of a drive failure:
 $ sudo apt purge btrfs-progs
 
 
-Step 2) Make sure both drives are bootable.
+### Step 2) Make sure both drives are bootable.
 You can check the status of the RAID by running the following:
 $ sudo mdadm --detail /dev/md0
 If the RAID has completed syncing, you will be able to crash or remove one drive and run off the remaining hard drive. However, while this is fine, there is one potential lurking issue. If you remove one drive, you might be unable to boot the system. So, let us make sure the ESP is the same on both drives, and that the system will try to boot from either of the hard drives and not just one. Ubuntu’s installer should have taken care of this for you, but feel free to check.
 
-Step 3) First, show the partition UUIDs:
+### Step 3) First, show the partition UUIDs:
 $ ls -la /dev/disk/by-partuuid/
 drwxr-xr-x 2 root root 120 Oct 1 22:43 .
 drwxr-xr-x 7 root root 140 Oct 1 22:43 .
@@ -233,13 +238,13 @@ lrwxrwxrwx 1 root root 10 Oct 1 22:43 97eecdcd-8ec3-4b8e-a6d9-1114d3baa75b -> ..
 lrwxrwxrwx 1 root root 10 Oct 1 22:43 98d444f0-df7f-41d9-8461-95ca566bd3a7 -> ../../sdb1
 Take note of the UUIDs belonging to the first partition on both drives. In this case, it is the ones starting with 0577b983(sda1) and 98d444f0(sdb1).
 
-Step 4) Next, check what drive you are currently using:
+### Step 4) Next, check what drive you are currently using:
 $ mount | grep boot
 /dev/sdb1 on /boot/efi type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
 As you can see, we are currently using sdb1, so that is working. Let us copy it over to sda1:
 $ sudo dd if=/dev/sdb1 of=/dev/sda1
 
-Step 5) Now we have a working ESP on both drives, so the next step is to make sure both ESP exists in the boot-list:
+### Step 5) Now we have a working ESP on both drives, so the next step is to make sure both ESP exists in the boot-list:
 $ efibootmgr -v
 BootCurrent: 0005
 Timeout: 0 seconds
@@ -253,19 +258,23 @@ Boot0005* ubuntu HD(1,GPT,98d444f0-df7f-41d9-8461-95ca566bd3a7,0x800,0x100000)/F
 Boot0006* ubuntu HD(1,GPT,0577b983-cf0a-4516-a3ab-92e19c3e9afe,0x800,0x100000)/File(\EFI\ubuntu\shimx64.efi)
 You should see two entries called Ubuntu. Make sure the UUIDs are the same as the two you took note of earlier.
 
-Step 6) If an entry is missing, you will need to add it.
+### Step 6) If an entry is missing, you will need to add it.
 Example of how to add an entry for the UUID starting with 0577b983(sda1) if it is missing:
 $ sudo efibootmgr --create --disk /dev/sda --part 1 --label "ubuntu" –loader "\EFI\ubuntu\shimx64.efi"
 
 You should now be able to remove any of the two drives and still boot the system.
 
-Step 7) Adding a fresh drive after a failure.
+### Step 7) Adding a fresh drive after a failure.
 So, a drive has failed, and you have replaced it with a new one. How do you set it up?
 First, find the new drive:
+''' bash
 $ sudo fdisk -l
+'''
 It is probably one without any partitions. Make sure you are using the right drive. In my case, it’s /dev/sdb, so I will want to back up the partition table from /dev/sda and write it to /dev/sdb. Change the source to the existing drive and does not to the new one:
+''' bash
 $ source=/dev/sda
 $ dest=/dev/sdb
+'''
 Create a backup in case you mix it up:
 $ sudo sgdisk --backup=backup-$(basename $source).sgdisk $source
 $ sudo sgdisk --backup=backup-$(basename $dest).sgdisk $dest
