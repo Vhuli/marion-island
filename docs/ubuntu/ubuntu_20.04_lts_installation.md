@@ -186,97 +186,112 @@ Once the system boots up, we will get the following screen.
 
 5. Create a partition for Ubuntu on the RAID device. You can use the remaining space if you want to. Format it as ext4 and mount it at /.
 
-    ![Screenshot of raid setup: Step 2](screenshot_of_raid_setup_step_2.png)\
-    **Figure 17.** *Screenshot of raid setup: Step 2.*
- 
-Figure 22:Screenshot of raid setup: step 5(a)
- 
-Figure 23:Screenshot of raid setup: step 5 (b)
+    ![Screenshot of raid setup: Step 5-1](screenshot_of_raid_setup_step_5-1.png)\
+    **Figure 22.** *Screenshot of raid setup: Step 5-1.*
 
-6.  All these mdX soft RAID partitions will now appear under USED DEVICES and you are ready to proceed with Ubuntu's installation.
-•   At the very bottom, you should now see "Done" enabled so hit it and proceed. What partitioning of disks when installing Ubuntu on software raid might look like. Save the changes and continue along with the installation.
- 
-Figure 24: Screenshot of raid setup : step 6 
+    ![Screenshot of raid setup: Step 5-2](screenshot_of_raid_setup_step_5-2.png)\
+    **Figure 23.** *Screenshot of raid setup: Step 5-2.*
 
+6. All these mdX soft RAID partitions will now appear under USED DEVICES and you are ready to proceed with Ubuntu's installation.
 
+    * At the very bottom, you should now see "Done" enabled so hit it and proceed. What partitioning of disks when installing Ubuntu on software raid might look like. Save the changes and continue along with the installation.
 
-
-
-
-
+    ![Screenshot of raid setup: Step 6](screenshot_of_raid_setup_step_6.png)\
+    **Figure 24.** *Screenshot of raid setup: Step 6.*
 
 
 ### Step 7) Finalising the setup
-1.  Choose to continue to write changes into the disk and to proceed with installation,
+1. Choose to continue to write changes into the disk and to proceed with installation,
+
+    ![Screenshot of final setup: Step 1](screenshot_of_final_setup_step_1.png)\
+    **Figure 25.** *Screenshot of final setup: Step 1.*
  
-Figure 25: Screenshot of final setup: step 1
-2.  Specify hostname and local user details.
+2. Specify hostname and local user details.
 
-•   In this step, you need to specify the local user details and Host name that you want to set for your server. So, enter the details that suits to your installation. Choose “Done” and hit enter.
+    * In this step, you need to specify the local user details and Host name that you want to set for your server. So, enter the details that suits to your installation. Choose “Done” and hit enter.
+
+        ![Screenshot of final setup: Step 2](screenshot_of_final_setup_step_2.png)\
+        **Figure 26.** *Screenshot of final setup: Step 2.*
+
+3. Choose to install OpenSSH server Package.
+
+    * In case you want to access your server over network using ssh then it is recommended to install openssh server package during installation. So, choose “Install OpenSSH server” option and then hit enter.
+
+        ![Screenshot of final setup: Step 3-1](screenshot_of_final_setup_step_3-1.png)\
+        **Figure 27.** *Screenshot of final setup: Step 3-1.*
+
+    * In the next screen, you have an option to choose the snaps for your server environment and if you do not want to install any snap during the installation then do not choose any snap and just choose Done and press enter to start the installation.
+
+        ![Screenshot of final setup: Step 3-2](screenshot_of_final_setup_step_3-2.png)\
+        **Figure 28.** *Screenshot of final setup: Step 3-2.*
+
+4. Ubuntu 20.04 Server Installation Started
+
+    * As we can see below, installation of Ubuntu 20.04 LTS server has been started and is in progress.
+
+        ![Screenshot of final setup: Step 4-1](screenshot_of_final_setup_step_4-1.png)\
+        **Figure 29.** *Screenshot of final setup: Step 4-1.*
+
+    * Once the installation is completed, installer will prompt to reboot the system. Choose ‘Reboot’ and hit enter.
+
+        ![Screenshot of final setup: Step 4-2](screenshot_of_final_setup_step_4-2.png)\
+        **Figure 30.** *Screenshot of final setup: Step 4-2.*
  
-Figure 26: Screenshot of final setup: step 2
+> Note: Do not forget to change boot medium from bootable media to disk so that system boots up with the disk on which we have just installed Ubuntu 20.04 LTS Severs.
 
-3.   Choose to install OpenSSH server Package.
+5.   Login after successful installation and verify OS version. Once the system is available after reboot, use the local user credentials that we have created during the installation for login.
 
-•   In case you want to access your server over network using ssh then it is recommended to install openssh server package during installation. So, choose “Install OpenSSH server” option and then hit enter.
+    ![Screenshot of final setup: Step 5](screenshot_of_final_setup_step_5.png)\
+    **Figure 31.** *Screenshot of final setup: Step 5.*
  
-Figure 27: Screenshot of final setup: step 3(a)
-•   In the next screen, you have an option to choose the snaps for your server environment and if you do not want to install any snap during the installation then do not choose any snap and just choose Done and press enter to start the installation.
- 
-Figure 28: Screenshot of final setup: step 3(b)
-
-
-
-4.  Ubuntu 20.04 Server Installation Started
-
-•   As we can see below, installation of Ubuntu 20.04 LTS server has been started and is in progress.
- 
-Figure 29: Screenshot of final setup: step 4(a)
-•   Once the installation is completed, installer will prompt to reboot the system. Choose ‘Reboot’ and hit enter.
- 
-Figure 30: Screenshot of final setup: step 4(b)
-Note: Do not forget to change boot medium from bootable media to disk so that system boots up with the disk on which we have just installed Ubuntu 20.04 LTS Sever
-
-
-5.   Login after successful installation and verify OS version.
-Once the system is available after reboot, use the local user credentials that we have created during the installation for login.
- 
-Figure 31: Screenshot of final setup: step 5
 Perfect, this confirms that Ubuntu 20.04 LTS server is installed successfully on our system.
+
 
 ## GUI/Desktop  Installation
 
-Step 1) Run the following command.
+### Step 1) Run the following command
 
-1.  $ sudo apt update
-2.  $ sudo apt install gnome-shell ubuntu-gnome-desktop -y
+```bash
+$ sudo apt update
+$ sudo apt install gnome-shell ubuntu-gnome-desktop -y
+```
 
-Step 2) Once Gnome desktop packages are installed successfully then reboot your server and you will get following login screen.
+### Step 2) Once Gnome desktop packages are installed successfully then reboot your server and you will get following login screen.
 
-3.  $ sudo apt update && sudo apt upgrade -y
-4.  $ sudo apt install ubuntu-restricted-extras
+```bash
+$ sudo apt update && sudo apt upgrade -y
+$ sudo apt install ubuntu-restricted-extras
+```
 
-
- 
-Figure 32: Screenshot of GUI setup : step 1
+    ![Screenshot of gui setup: Step 1](screenshot_of_gui_setup_step_1.png)\
+    **Figure 32.** *Screenshot of gui setup: Step 1.*
 
 
 ## Handling the raided booting
 Software RAID has been relatively simple to use for a long time as it mostly just works. Things are less straightforward when using UEFI as you need an EFI partition that cannot be on a software RAID.
 Well, you could put the EFI partition in a software RAID if you put the metadata at the end of the partition. That way the beginning of the partition would be the same as without RAID. The issue with this is if something external writes to the partition as you cannot be sure which drive has the correct state. That is why we are going to use another approach.
+
 Instead of putting it on a RAID, we will install Ubuntu as usual, and then copy the EFI partition over to the second drive. Then we will make sure that either of the two hard drives can go away without affecting the ability to run or boot. We are going to use the efibootmgr tool to make sure both drives are in the boot-list. We will also add some info on how to handle drive replacements and updates affecting EFI.  So, let us get on with it. run the following command:
+
 
 ### Step 1) Avoid slow boot.
 Remove btrfs-progs to speed up the boot process in case of a drive failure:
+```bash
 $ sudo apt purge btrfs-progs
+```
 
 
 ### Step 2) Make sure both drives are bootable.
 You can check the status of the RAID by running the following:
+```bash
 $ sudo mdadm --detail /dev/md0
+```
+
 If the RAID has completed syncing, you will be able to crash or remove one drive and run off the remaining hard drive. However, while this is fine, there is one potential lurking issue. If you remove one drive, you might be unable to boot the system. So, let us make sure the ESP is the same on both drives, and that the system will try to boot from either of the hard drives and not just one. Ubuntu’s installer should have taken care of this for you, but feel free to check.
 
+
 ### Step 3) First, show the partition UUIDs:
+```bash
 $ ls -la /dev/disk/by-partuuid/
 drwxr-xr-x 2 root root 120 Oct 1 22:43 .
 drwxr-xr-x 7 root root 140 Oct 1 22:43 .
@@ -284,15 +299,24 @@ lrwxrwxrwx 1 root root 10 Oct 1 22:43 04d1fc28-4747-497b-9732-75f691a7ae7a -> ..
 lrwxrwxrwx 1 root root 10 Oct 1 22:43 0577b983-cf0a-4516-a3ab-92e19c3e9afe -> ../../sda1
 lrwxrwxrwx 1 root root 10 Oct 1 22:43 97eecdcd-8ec3-4b8e-a6d9-1114d3baa75b -> ../../sda2
 lrwxrwxrwx 1 root root 10 Oct 1 22:43 98d444f0-df7f-41d9-8461-95ca566bd3a7 -> ../../sdb1
-Take note of the UUIDs belonging to the first partition on both drives. In this case, it is the ones starting with 0577b983(sda1) and 98d444f0(sdb1).
+```
+
+> Note: The UUIDs belonging to the first partition on both drives. In this case, it is the ones starting with 0577b983(sda1) and 98d444f0(sdb1).
+
 
 ### Step 4) Next, check what drive you are currently using:
+```bash
 $ mount | grep boot
 /dev/sdb1 on /boot/efi type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+```
 As you can see, we are currently using sdb1, so that is working. Let us copy it over to sda1:
+```bash
 $ sudo dd if=/dev/sdb1 of=/dev/sda1
+```
+
 
 ### Step 5) Now we have a working ESP on both drives, so the next step is to make sure both ESP exists in the boot-list:
+```bash
 $ efibootmgr -v
 BootCurrent: 0005
 Timeout: 0 seconds
@@ -304,48 +328,84 @@ Boot0003* UEFI VBOX HARDDISK VB7e066f6b-0343c49a PciRoot(0x0)/Pci(0xd,0x0)/Sata(
 Boot0004* EFI Internal Shell FvVol(7cb8bdc9-f8eb-4f34-aaea-3ee4af6516a1)/FvFile(7c04a583-9e3e-4f1c-ad65-e05268d0b4d1)
 Boot0005* ubuntu HD(1,GPT,98d444f0-df7f-41d9-8461-95ca566bd3a7,0x800,0x100000)/File(\EFI\ubuntu\shimx64.efi)
 Boot0006* ubuntu HD(1,GPT,0577b983-cf0a-4516-a3ab-92e19c3e9afe,0x800,0x100000)/File(\EFI\ubuntu\shimx64.efi)
+```
+
 You should see two entries called Ubuntu. Make sure the UUIDs are the same as the two you took note of earlier.
+
 
 ### Step 6) If an entry is missing, you will need to add it.
 Example of how to add an entry for the UUID starting with 0577b983(sda1) if it is missing:
+```bash
 $ sudo efibootmgr --create --disk /dev/sda --part 1 --label "ubuntu" –loader "\EFI\ubuntu\shimx64.efi"
+```
 
 You should now be able to remove any of the two drives and still boot the system.
+
 
 ### Step 7) Adding a fresh drive after a failure.
 So, a drive has failed, and you have replaced it with a new one. How do you set it up?
 First, find the new drive:
-``` bash
+```bash
 $ sudo fdisk -l
 ```
 It is probably one without any partitions. Make sure you are using the right drive. In my case, it’s /dev/sdb, so I will want to back up the partition table from /dev/sda and write it to /dev/sdb. Change the source to the existing drive and does not to the new one:
-``` bash
+```bash
 $ source=/dev/sda
 $ dest=/dev/sdb
 ```
+
 Create a backup in case you mix it up:
+```bash
 $ sudo sgdisk --backup=backup-$(basename $source).sgdisk $source
 $ sudo sgdisk --backup=backup-$(basename $dest).sgdisk $dest
+```
+
 Create a replica of the source partition table and then generate new UUIDs for the new drive:
+```bash
 $ sudo sgdisk --replicate=$dest $source
 $ sudo sgdisk -G $dest
+```
+
 Start syncing the raid, replace the X with the correct partition(it’s 2 for me):
+```bash
 $ sudo mdadm --manage /dev/md0 -a $(echo "$dest"X)
+```
+
 Now, copy over the ESP(replace X with the correct partition, it is 1 for me):
+```bash
 $ sudo dd if=$(echo "$source"X) of=$(echo "$dest"X)
+```
+
 Then list the current drive UUIDs:
+```bash
 $ ls -la /dev/disk/by-partuuid/
+```
+
 Then show the boot-list:
+```bash
 $ efibootmgr -v
+```
+
 Take note of the BootOrder in case you want to change it. If any of the ubuntu entries points to a UUID that currently do not exist, delete it(replace XXXX with the ID form the boot-list):
+```bash
 $ sudo efibootmgr -B -b XXXX
+```
+
 If any of the current UUIDs for partition 1 on the drives do not exist in the boot-list, add it(replace the X with the drive that is missing):
+```bash
 $ sudo efibootmgr --create --disk /dev/sdX --part 1 --label "ubuntu" --loader "\EFI\ubuntu\shimx64.efi"
+```
+
 Verify that it is correct:
+```bash
 $ efibootmgr -v
+```
+
 All good? Great! You now have a working RAID again.
-……………………………………………………………………………………..
+
+---
+
 Reference: 
-https://www.linuxtechi.com/ubuntu-20-04-lts-server-installation-guide/
-https://alexskra.com/blog/ubuntu-20-04-with-software-raid1-and-uefi/
+[Ubuntu 20.04 LTS Server Installation Guide](https://www.linuxtechi.com/ubuntu-20-04-lts-server-installation-guide/)
+[Ubuntu 20.04 with software RAID1 and UEFI](https://alexskra.com/blog/ubuntu-20-04-with-software-raid1-and-uefi/)
 
