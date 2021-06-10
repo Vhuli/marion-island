@@ -3,6 +3,12 @@ Author : Vhuli Manukha
 
 Date : 24/05/2021
 
+<table>
+    <tr>
+        <td>Foo</td>
+    </tr>
+</table>
+
 ## Introduction
 In this article we will demonstrate Ubuntu 20.04 LTS server installation steps (for raid 1 setup) with screenshots. Before initiating the Installation process, let us see what minimum system requirements for Ubuntu 20.04 LTS Server installation are.
 1.  4 GB Memory (RAM)
