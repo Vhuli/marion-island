@@ -59,7 +59,7 @@ The steps below will take you through the setup step-for-step:
 ### Step 3) Boot into the target system
 Insert the Bootable Flash Drive into the target system on which you want to install Ubuntu 20.04 LTS server and reboot the target system (we are using supermicro). On reboot go to its bios settings (by pressing F11 for Supermicro PC) and change boot medium from disk to bootable media (Flash drive). UEFI: Generic Flash Disk 8.07. partition 1 in our case
 
-![Booting from Flash Drive](booting_from_flash_drive.png "Booting from flash drive")\
+![Booting from Flash Drive](booting_from_flash_drive.png)\
 **Figure 2.** *Booting from flash drive.*
 
 
@@ -67,17 +67,21 @@ Insert the Bootable Flash Drive into the target system on which you want to inst
 
 Once the system boots up, we will get the following screen. 
 1.  Navigate to Install Ubuntu Server using the arrow keys and press enter to select.
- 
-![Screenshot of basic setup](screenshot_of_basic_setup_step_1.png "Screenshot of basic setup: Step 1")\
+
+![Screenshot of basic setup: Step 1](screenshot_of_basic_setup_step_1.png)\
 **Figure 3.** *Screenshot of basic setup: Step 1.*
 
 
 2.  Select English as the language and press enter.
  
-Figure 4: Screenshot of basic setup: step 2
+![Screenshot of basic setup: Step 2](screenshot_of_basic_setup_step_2.png)\
+**Figure 4.** *Screenshot of basic setup: Step 2.*
+
+
 3.  Choose keyboard layout and then choose “Done” option and hit enter.
- 
-Figure 5: Screenshot of basic setup: step 3
+
+![Screenshot of basic setup: Step 3](screenshot_of_basic_setup_step_3.png)\
+**Figure 5.** *Screenshot of basic setup: Step 3.*
 
 
 4.  Configure network and Ubuntu Archive Mirror.
